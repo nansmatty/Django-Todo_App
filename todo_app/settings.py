@@ -27,7 +27,7 @@ SECRET_KEY = '-)^&$y9hpo(ftt_r9)r^%jvp78x&7ay5pstqf^i+@$n*q+-%-1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["https://peaceful-crag-50983.herokuapp.com"]
 
 
 # Application definition
