@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">	
+	<link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+	<div class="container">
+		<div class="content">
+			<h1>Todo-App</h1>
+            <p class="tagline">a Django todo app</p>
+            <form action="{% url 'todo' %}" method="POST">
+                {% csrf_token %}
+            	<div class="inputBox">
+            		<input type="text" name="title" required>
+            		<span>Add a Todo</span>
+            	</div>
+            	<div class="inputBox">
+            		<button type="submit">Add Todo</button>             	
+            	</div>
+            </form>
+        </div>
+        <div class="todo">
+            <ul>                    
+                {% for item in item_list %}
+
+                    <li>
+                        <h4>{{item.title}}</h4>
+                        <form action="del/{{item.id}}" method="post">
+                            {% csrf_token %}
+                            <button type="submit" value="{{item.id}}">Delete</button>
+                        </form>
+                    </li>
+                    
+                {% endfor %}
+            </ul>
+        </div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,154 @@
+html {
+    font-size: 100%;
+}
+body {
+    background: #1A2980;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #26D0CE, #1A2980);
+	background: linear-gradient(to right, #26D0CE, #1A2980); 
+    font-family: 'New Tegomin', serif;
+}
+
+.container{
+	width: 700px;
+	margin: 0 auto;
+	background: #ffffff;
+	padding: 20px 0;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	align-items: center;
+}
+
+h1 {
+    color: #000;
+    text-align: center;
+    font-size: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 5px;
+}
+.tagline {
+    margin-top: -10px;
+    text-align: center;
+    padding: 5px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #000; 
+}
+
+.container .content form {
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.inputBox{
+	position: relative;
+	display: inline-block;
+}
+
+.inputBox input{
+	position: relative;
+	background: transparent;
+	outline: none;
+	border: none;
+	width: 100%;
+	color: #000;
+	padding-bottom: 10px;
+	font-size: 16px;
+	letter-spacing: 1px;
+	font-weight: 300;
+	border-bottom: 2px solid black;
+}
+.inputBox button{
+	font-family: 'New Tegomin', serif;
+	background: #FF512F;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #F09819, #FF512F);
+	background: linear-gradient(to right, #F09819, #FF512F);
+	color: #fff;
+	padding: 8px 20px;
+	margin: 0 20px;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: bold;
+	border: none;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	border-radius: 15px;
+}
+
+.inputBox span{
+	position: absolute;
+	left: 0;
+	top: -0.5px;
+	font-size: 15px;
+	font-weight: 300;
+	display: inline-block;
+	pointer-events: none;
+	letter-spacing: 1px;
+	color: rgba(0,0,0,0.7);
+	transition: all 0.2s;
+}
+
+.inputBox input:focus ~ span, .inputBox input:valid ~ span{
+	transform: translateY(-24px);
+	color: #2827CC;
+	font-weight: 500;
+	font-size: 14px;
+}
+
+.inputBox input:focus, .inputBox input:valid {
+	border-bottom-color: #000;
+}
+
+.container .todo {
+	padding: 20px;
+	display: flex;
+	align-items: center;
+}
+
+.container .todo ul{
+	width: 100%;
+	list-style: none;
+}
+
+.container .todo ul li {
+	width: 100%;
+	margin-bottom: 30px;
+	display: inline-flex;
+}
+
+.container .todo ul li h4{
+	width: 75%;
+	display: inline-block;
+	background: #8e2de2;
+	background: -webkit-linear-gradient(to right, #8e2de2, #4a00e0);
+	background: linear-gradient(to right, #8e2de2, #4a00e0);
+	padding: 8px 10px 12px;
+	margin: 0;
+	color: white;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: bold;
+	border: none;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	border-radius: 10px;
+}
+
+.container .todo ul li form button{
+	font-family: 'New Tegomin', serif;
+	background: #d31027;;
+	background: -webkit-linear-gradient(to right, #d31027, #ea384d);
+	background: linear-gradient(to right, #d31027, #ea384d);
+	padding: 5px 10px 12px;
+	color: white;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: bold;
+	border: none;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	border-radius: 15px;
+	margin-left: 3px;
+}
